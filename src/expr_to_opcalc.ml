@@ -76,12 +76,9 @@ let rec binomial_transform expr =
 (* Also assumes all output variables are n or higher *)
 let rec expr_to_opCalc expr ivar_ident =
   match expr with
-  | Plus (left, right) ->							(* should not be called *)
-      OpPlus(expr_to_opCalc left ivar_ident, expr_to_opCalc right ivar_ident)
-  | Minus (left, right) ->							(* Minuses should be removed *)
-      OpMinus(expr_to_opCalc left ivar_ident, expr_to_opCalc right ivar_ident)			(* this method should not be called *)
-  | Times (left, right) ->							(* also should not be called *)
-      OpTimes(expr_to_opCalc left ivar_ident, expr_to_opCalc right ivar_ident)
+  | Plus (left, right)
+  | Minus (left, right)
+  | Times (left, right) -> raise (Expr_to_op_exc "No translation")
   | Divide (left, right) ->
       OpDivide (expr_to_opCalc left ivar_ident, expr_to_opCalc right ivar_ident)
   | Product expr_list ->

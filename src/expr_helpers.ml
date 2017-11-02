@@ -363,9 +363,8 @@ let inequation_to_string_IR e =
 
 let rec is_const expr =
   match expr with
-  | Rational _ | Base_case _ | Symbolic_Constant _ | Pi | Arctan _ | Iif _ ->
-    true
-  | Output_variable _ | Input_variable _ | Undefined -> false
+  | Rational _ | Base_case _ | Symbolic_Constant _ | Pi | Arctan _ -> true
+  | Iif (_, _) | Output_variable _ | Input_variable _ | Undefined -> false
   | Pow (left, right) ->
     (is_const left) && (is_const right)
   | Times (left, right) ->
