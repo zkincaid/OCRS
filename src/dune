@@ -1,0 +1,5 @@
+(library
+  (name OCRS)
+  (public_name OCRS)
+  (flags (:standard -w -27-39-6-35-32))
+  (libraries gmp))

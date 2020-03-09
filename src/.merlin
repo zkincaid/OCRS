@@ -1,0 +1,7 @@
+B /home/zkincaid/.opam/4.06.0+flambda/lib/gmp
+B /home/zkincaid/.opam/4.06.0+flambda/lib/ocaml
+B ../_build/default/src/.OCRS.objs
+S /home/zkincaid/.opam/4.06.0+flambda/lib/gmp
+S /home/zkincaid/.opam/4.06.0+flambda/lib/ocaml
+S .
+FLG -open OCRS -w @a-4-29-40-41-42-44-45-48-58-59-60-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -27-39-6-35-32
